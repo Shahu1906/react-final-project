@@ -1,0 +1,243 @@
+/* ===================================================
+   Paradise Nursery - Cart Item Styles
+   =================================================== */
+
+.cart-container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.cart-header {
+  text-align: center;
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.total-cart-amount {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #1b4332;
+}
+
+/* Empty Cart State */
+.empty-cart-state {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.empty-cart-state p {
+  font-size: 1.3rem;
+  color: #64748b;
+  margin-bottom: 24px;
+}
+
+/* Cart Items List */
+.cart-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  transition: box-shadow 0.2s ease;
+}
+
+.cart-item-row:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.cart-item-details {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+}
+
+.cart-item-thumbnail {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+}
+
+.cart-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cart-item-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.cart-item-unit-price {
+  font-size: 1rem;
+  color: #475569;
+  font-weight: 500;
+}
+
+/* Quantity Controls */
+.cart-item-quantity-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 24px;
+}
+
+.quantity-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid #cbd5e1;
+  background-color: #ffffff;
+  color: #1e293b;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.quantity-btn:hover {
+  background-color: #e2e8f0;
+  border-color: #94a3b8;
+}
+
+.quantity-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  min-width: 24px;
+  text-align: center;
+  color: #1e293b;
+}
+
+/* Subtotal & Delete Action */
+.cart-item-subtotal-section {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.cart-item-total-cost {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1b4332;
+  min-width: 110px;
+  text-align: right;
+}
+
+.delete-btn {
+  background-color: #ef4444;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.delete-btn:hover {
+  background-color: #dc2626;
+  transform: translateY(-1px);
+}
+
+.delete-btn:active {
+  transform: translateY(0);
+}
+
+/* Bottom Actions */
+.cart-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 2px solid #e2e8f0;
+  gap: 16px;
+}
+
+.continue-shopping-btn {
+  background-color: #475569;
+  color: #ffffff;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.continue-shopping-btn:hover {
+  background-color: #334155;
+  box-shadow: 0 4px 12px rgba(51, 65, 85, 0.3);
+}
+
+.checkout-btn {
+  background-color: #16a34a;
+  color: #ffffff;
+  padding: 12px 36px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(22, 163, 74, 0.3);
+}
+
+.checkout-btn:hover {
+  background-color: #15803d;
+  box-shadow: 0 6px 18px rgba(22, 163, 74, 0.4);
+}
+
+/* Responsive Cart Styling */
+@media (max-width: 768px) {
+  .cart-item-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .cart-item-quantity-section {
+    margin: 0;
+  }
+
+  .cart-item-subtotal-section {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .cart-item-total-cost {
+    text-align: left;
+  }
+
+  .cart-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .continue-shopping-btn,
+  .checkout-btn {
+    width: 100%;
+  }
+}
